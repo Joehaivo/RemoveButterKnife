@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "com.github.joehaivo"
-version = "1.0.0"
+version = "1.0.1"
 
 repositories {
     mavenCentral()
@@ -41,8 +41,13 @@ tasks {
         compilerVersion.set("211.7628.21")
     }
     patchPluginXml {
+        pluginDescription.set("""
+            移除Java文件中的ButterKnife依赖(@BindView、@OnClick)，将其转化为`findViewById`代码。<br>
+            Remove the ButterKnife annotation(@BindVie、@OnClick) from the Java file and convert it to `findViewById` code. <br>
+            <a href="https://github.com/Joehaivo/RemoveButterKnife">Github README for more detail >></a><br>
+        """)
         changeNotes.set("""
-           2022.7.15: 添加`RemoveButterknife功能`.<br> 
+           2022.7.15: add `RemoveButterknife` menu.<br> 
         """)
         sinceBuild.set("201.*")
         untilBuild.set("222.*")
