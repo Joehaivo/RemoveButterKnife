@@ -33,8 +33,7 @@ intellij {
 }
 
 dependencies {
-//    api("org.apache.pdfbox:fontbox:3.0.0-alpha2")
-    compileOnly("com.github.adedayo.intellij.sdk:dom-openapi:142.1")
+//    compileOnly("com.github.adedayo.intellij.sdk:dom-openapi:142.1")
 }
 
 tasks {
@@ -42,14 +41,9 @@ tasks {
         compilerVersion.set("211.7628.21")
     }
     patchPluginXml {
-        changeNotes.set(
-            """
-        2021.03.22: 增加`快速添加渠道`.<br>
-        2021.12.15: 增加Iconfont图标解析与显示.<br>
-        2021.10.18: 支持.ace文件的语法检查和关键字高亮.<br>
-        2021.09.17: 增加`去除Butterknife功能`.<br>
-            """
-        )
+        changeNotes.set("""
+           2022.7.15: 添加`RemoveButterknife功能`.<br> 
+        """)
         sinceBuild.set("201.*")
         untilBuild.set("222.*")
     }
